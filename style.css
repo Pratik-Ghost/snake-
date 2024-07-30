@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Background color of the page */
+}
+
+.game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; /* Background color of the game container */
+    padding: 20px;
+}
+
+canvas {
+    border: 1px solid #fff; /* Optional: additional border for the canvas */
+    background-color: #000; /* Background color of the canvas */
+    position: relative;
+    z-index: 1; /* Ensure the canvas is beneath the buttons */
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: white; /* Score color */
+    z-index: 2;
+}
+
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay with transparency */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color for game over screen */
+    z-index: 3; /* Ensure game over screen is above the canvas */
+}
+
+.game-over-message {
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    z-index: 4; /* Ensure buttons are above everything else */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+button:focus {
+    outline: none;
+}
+
+.start-game {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the button */
+    display: block; /* Show by default */
+    z-index: 4; /* Ensure it is above the canvas and other elements */
+}
+
+.border-wrapper {
+    position: relative;
+    border: 5px solid #fff; /* Inner border color (white) */
+    box-shadow: 0 0 0 10px #000, 0 0 0 15px #fff; /* Outer border effect */
+    padding: 10px; /* Adjust padding to ensure space for the outer border */
+}
